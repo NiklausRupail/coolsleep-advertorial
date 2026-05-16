@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dlaczego Twoja "chłodząca" poduszka przestaje chłodzić po 10 minutach — i co NASA zrobiła z tym problemem 40 lat temu</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF7;
+    --text: #1a1a1a;
+    --text-soft: #4a4a4a;
+    --accent: #1B4D6E;
+    --accent-light: #E8F0F5;
+    --warm: #C7553B;
+    --warm-light: #FFF0EC;
+    --border: #e2e0db;
+    --quote-bg: #F5F4F0;
+    --serif: 'Lora', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+    --max-w: 680px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* — TOP BAR — */
+  .top-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+  }
+  .top-bar span { opacity: 0.6; }
+
+  /* — HERO — */
+  .hero {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 48px 20px 0;
+  }
+
+  .category-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warm);
+    background: var(--warm-light);
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(26px, 5vw, 36px);
+    font-weight: 600;
+    line-height: 1.28;
+    color: var(--text);
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: var(--text-soft);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-soft);
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .meta-dot { opacity: 0.3; }
+  .meta-read { 
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  /* — ARTICLE BODY — */
+  .article {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 36px 20px 60px;
+  }
+
+  .article p {
+    margin-bottom: 22px;
+    color: var(--text);
+  }
+
+  .article p.lead {
+    font-size: 19px;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  .article strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* — SECTION HEADERS — */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 44px 0 22px;
+  }
+  .section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+  }
+
+  /* — QUOTE BLOCKS — */
+  .quote-block {
+    background: var(--quote-bg);
+    border-left: 3px solid var(--accent);
+    padding: 22px 26px;
+    margin: 28px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .quote-block p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-soft);
+    margin-bottom: 8px;
+  }
+  .quote-block p:last-child { margin-bottom: 0; }
+  .quote-source {
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 13px;
+    color: var(--text-soft);
+    opacity: 0.7;
+    margin-top: 8px;
+  }
+
+  /* — STAT CALLOUT — */
+  .stat-callout {
+    background: var(--accent);
+    color: #fff;
+    padding: 28px 30px;
+    border-radius: 8px;
+    margin: 32px 0;
+    text-align: center;
+  }
+  .stat-callout .stat-number {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+  .stat-callout .stat-desc {
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+
+  /* — WARM CALLOUT (problem box) — */
+  .problem-box {
+    background: var(--warm-light);
+    border: 1px solid rgba(199, 85, 59, 0.15);
+    border-radius: 8px;
+    padding: 26px 28px;
+    margin: 32px 0;
+  }
+  .problem-box .box-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm);
+    margin-bottom: 10px;
+  }
+  .problem-box p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 0;
+  }
+
+  /* — MECHANISM BOX — */
+  .mechanism-box {
+    background: var(--accent-light);
+    border: 1px solid rgba(27, 77, 110, 0.12);
+    border-radius: 8px;
+    padding: 26px 28px;
+    margin: 32px 0;
+  }
+  .mechanism-box .box-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .mechanism-box p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .mechanism-box p:last-child { margin-bottom: 0; }
+
+  /* — COMPARISON — */
+  .comparison {
+    margin: 36px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .comparison-header div {
+    padding: 14px 20px;
+    text-align: center;
+  }
+  .comparison-header .old {
+    background: #f0e8e5;
+    color: var(--warm);
+  }
+  .comparison-header .new {
+    background: var(--accent);
+    color: #fff;
+  }
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border);
+    font-size: 14.5px;
+  }
+  .comparison-row div {
+    padding: 14px 20px;
+    line-height: 1.5;
+  }
+  .comparison-row .old-cell {
+    background: #FFFCFB;
+    color: var(--text-soft);
+  }
+  .comparison-row .new-cell {
+    background: #F7FBFD;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* — DIVIDER — */
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: var(--border);
+    margin: 40px auto;
+  }
+
+  /* — CONTINUATION MARKER — */
+  .continuation {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--text-soft);
+    font-size: 15px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* — RESPONSIVE — */
+  @media (max-width: 600px) {
+    .article { padding: 28px 18px 48px; }
+    .hero { padding: 32px 18px 0; }
+    h1 { font-size: 24px; }
+    .comparison-row div { padding: 11px 14px; font-size: 13.5px; }
+    .stat-callout .stat-number { font-size: 34px; }
+    .section-title { font-size: 19px; }
+  }
+
+  /* — TESTIMONIAL STACK — */
+  .testimonial-stack {
+    margin: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 26px;
+  }
+  .testimonial-stars {
+    color: #E8A838;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .testimonial-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15.5px;
+    line-height: 1.72;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .testimonial-author {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-soft);
+  }
+
+  /* — FAQ ITEMS — */
+  .faq-item {
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .faq-question {
+    background: var(--quote-bg);
+    padding: 18px 22px;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--text);
+  }
+  .faq-answer {
+    padding: 18px 22px;
+    font-size: 15.5px;
+    line-height: 1.72;
+    color: var(--text-soft);
+    background: #fff;
+  }
+
+  /* — GUARANTEE BOX — */
+  .guarantee-box {
+    background: linear-gradient(135deg, #1B4D6E 0%, #1a3f5c 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 34px 30px;
+    margin: 36px 0;
+    text-align: center;
+  }
+  .guarantee-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  .guarantee-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+  .guarantee-text {
+    font-size: 15.5px;
+    line-height: 1.72;
+    opacity: 0.9;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* — PRICING SECTION — */
+  .pricing-section {
+    margin: 36px 0;
+  }
+  .pricing-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .pricing-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px 26px 22px;
+    margin-bottom: 14px;
+    background: #fff;
+    position: relative;
+  }
+  .pricing-popular {
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 20px rgba(27, 77, 110, 0.1);
+  }
+  .popular-badge {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pricing-tier {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  .pricing-qty {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .pricing-save {
+    display: inline-block;
+    background: var(--warm-light);
+    color: var(--warm);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .pricing-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-soft);
+    margin-bottom: 16px;
+  }
+  .pricing-cta-wrap {
+    text-align: center;
+  }
+
+  /* — CTA BUTTONS — */
+  .cta-button {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: #fff;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+  }
+  .cta-button:hover {
+    background: var(--accent-light);
+  }
+  .cta-primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .cta-primary:hover {
+    background: #164263;
+    border-color: #164263;
+  }
+  .cta-large {
+    font-size: 17px;
+    padding: 18px 40px;
+  }
+
+  /* — FINAL CTA SECTION — */
+  .final-cta-section {
+    text-align: center;
+    background: var(--accent-light);
+    border-radius: 12px;
+    padding: 44px 28px;
+    margin: 36px 0 24px;
+  }
+  .final-cta-headline {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4.5vw, 28px);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .final-cta-sub {
+    font-size: 16px;
+    color: var(--text-soft);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .final-cta-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-soft);
+    opacity: 0.7;
+  }
+
+  /* — DISCLAIMER — */
+  .disclaimer {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .disclaimer p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--text-soft);
+    opacity: 0.6;
+  }
+
+  /* — RESPONSIVE (extended) — */
+  @media (max-width: 600px) {
+    .pricing-card { padding: 22px 20px 18px; }
+    .cta-large { font-size: 15px; padding: 16px 28px; }
+    .final-cta-section { padding: 32px 20px; }
+    .guarantee-box { padding: 28px 22px; }
+    .guarantee-title { font-size: 19px; }
+    .faq-question { padding: 15px 18px; font-size: 15px; }
+    .faq-answer { padding: 15px 18px; font-size: 14.5px; }
+    .testimonial-card { padding: 20px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span>Advertorial</span> · Zdrowie & Sen · Maj 2026
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="category-tag">Nocne poty & Menopauza</div>
+
+  <h1>Dlaczego Twoja „chłodząca" poduszka przestaje chłodzić po 10 minutach — i&nbsp;co NASA zrobiła z&nbsp;tym problemem 40 lat temu</h1>
+
+  <p class="subtitle">Jedyna poszewka na rynku z technologią zmiennofazową NASA — aktywnie reguluje temperaturę w reakcji na ciepło Twojego ciała, cykl po cyklu, przez całą noc.</p>
+
+  <div class="meta">
+    <span>Redakcja CoolSleep</span>
+    <span class="meta-dot">·</span>
+    <span>14 maja 2026</span>
+    <span class="meta-dot">·</span>
+    <span class="meta-read">7 min czytania</span>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article">
+
+  <!-- OPENING — AGITATION -->
+  <p class="lead">Godzina 3:07 w nocy. Budzisz się zlana potem. Piżama przesiąknięta. Pościel mokra. Obracasz poduszkę na „zimną stronę" — ale zimna strona nie jest już zimna. Nigdy nie jest wystarczająco długo.</p>
+
+  <p>Wstajesz, zmieniasz piżamę, wracasz do łóżka. Próbujesz zasnąć, ale teraz czekasz — czy za chwilę będzie kolejne uderzenie gorąca? Lęk nie pozwala zasnąć. Noc, która miała dać odpoczynek, zamienia się w serię drzemek między jednym a drugim atakiem.</p>
+
+  <p>Rano wstajesz wyczerpana. Kawa nie pomaga. Koncentracja zerowa. Na pytanie „jak się spało?" odpowiadasz: „w porządku" — bo jak wytłumaczyć coś, czego nikt, kto tego nie przeżywa, nie zrozumie?</p>
+
+  <p>Jeśli to brzmi znajomo, nie jesteś sama. Nocne poty związane z menopauzą i&nbsp;perimenopauzą dotykają ponad 75% kobiet w&nbsp;Polsce w&nbsp;wieku 40–60 lat. Większość z nich szuka rozwiązań samodzielnie, po cichu, na telefonie — najczęściej właśnie o 3 w nocy.</p>
+
+  <p>I większość z nich wydała już pieniądze na produkty „chłodzące", które okazały się kolejnym rozczarowaniem.</p>
+
+  <p><strong>Ten artykuł wyjaśnia, dlaczego tak się dzieje — i co z tym zrobić.</strong></p>
+
+  <div class="divider"></div>
+
+  <!-- REASON 1 — THE PROBLEM MECHANISM -->
+  <div class="section-label">
+    <div class="section-number">1</div>
+    <div class="section-title">Twoja pościel nie chłodzi — ona tylko udaje</div>
+  </div>
+
+  <p>Żelowe poduszki chłodzące, bambusowe poszewki, prześcieradła „moisture-wicking" — rynek jest pełen produktów, które obiecują chłodną noc. Jeśli próbowałaś któregoś z nich, pewnie znasz ten schemat:</p>
+
+  <p>Kładziesz głowę. Przez 5–15 minut jest przyjemnie chłodno. Potem poduszka nagrzewa się do temperatury Twojego ciała — i zostaje tak do rana. Chłodzenie skończyło się, zanim jeszcze naprawdę zasnęłaś.</p>
+
+  <div class="problem-box">
+    <div class="box-label">Syndrom Jednokierunkowego Chłodzenia</div>
+    <p>Każdy produkt „cooling" na rynku działa w jednym kierunku: pochłania ciepło. Żel pochłania, bambus przepuszcza, moisture-wicking odprowadza wilgoć. Problem? <strong>Żaden z nich nie oddaje ciepła z powrotem. Nie resetuje się. Nie tworzy cyklu.</strong> Pochłaniają ciepło, nasycają się nim, i po 10–15 minutach są tak ciepłe jak Twoje ciało. To nie jest wada konkretnego produktu — to fundamentalna wada konstrukcyjna każdego „chłodzącego" materiału, który nie używa technologii zmiennofazowej.</p>
+  </div>
+
+  <p>Dlatego żelowa poduszka, którą kupiłaś za 80 zł, przestała działać po pierwszej nocy. Dlatego bambusowa poszewka oddycha, ale nie chłodzi. Dlatego „cooling" prześcieradło za 150 zł radzi sobie z potem, ale nie zapobiega mu.</p>
+
+  <p>Te produkty nie były oszustwem. Ale nie były też rozwiązaniem Twojego problemu. Były rozwiązaniem innego problemu — problemu ciepła o 22:00, gdy kładziesz się spać. Tymczasem Ty potrzebujesz chłodzenia o 3 w nocy, gdy Twoje ciało się przegrzewa.</p>
+
+  <p>To jest właśnie moment, w którym żel zawodzi — bo jest już ciepły — a Twoja poszewka PCM dopiero wtedy zaczyna działać.</p>
+
+  <div class="divider"></div>
+
+  <!-- REASON 2 — WHY THE MARKET FAILED THEM -->
+  <div class="section-label">
+    <div class="section-number">2</div>
+    <div class="section-title">Dlaczego każdy produkt „cooling", który próbowałaś, zawiódł</div>
+  </div>
+
+  <p>Kiedy kobieta po 45. roku życia wpisuje w Google „chłodząca poduszka na nocne poty" — widzi dziesiątki opcji. Żele, pianki, podkładki na materac, bambusowe poszewki, a nawet inteligentne materace za 10 000 zł. Czyta recenzje. Niektóre brzmią obiecująco.</p>
+
+  <p>Więc kupuje. Próbuje. I przez jedną, może dwie noce — wydaje się, że działa. A potem wraca ten sam schemat. Budzenie o 3 w nocy. Pot. Mokra pościel. Zmiana piżamy w ciemności.</p>
+
+  <div class="quote-block">
+    <p>„Wydałam już setki złotych na produkty, które miały mi pomóc przespać noc. Żelowe poduszki, bambusowe prześcieradła, nawet specjalna piżama. Każdy działał może jedną noc, a potem to samo. W pewnym momencie przestałam wierzyć, że cokolwiek działa."</p>
+    <div class="quote-source">— Forum Położnictwa i Ginekologii, 2025</div>
+  </div>
+
+  <p>To nie jest kwestia „złego produktu" czy „złej marki". To jest kwestia złej technologii. Żel, bambus, moisture-wicking — wszystkie działają na tej samej zasadzie: pasywna absorpcja ciepła. Pochłaniają ciepło, nasycają się, koniec. Nie ma drugiego aktu.</p>
+
+  <p>Wyobraź sobie to tak: żelowa poduszka to kostka lodu. Przez chwilę jest zimna, ale potem się rozpuszcza i zostawia mokro. A Ty potrzebujesz termostatu — czegoś, co <strong>reaguje</strong> na zmiany temperatury i samo się koryguje. Całą noc.</p>
+
+  <p>Taki materiał istnieje. I nie powstał w laboratorium firmy pościelowej. Powstał w NASA.</p>
+
+  <div class="divider"></div>
+
+  <!-- REASON 3 — THE DISCOVERY STORY / NASA ORIGIN -->
+  <div class="section-label">
+    <div class="section-number">3</div>
+    <div class="section-title">Jak technologia z kosmosu trafiła na Twoją poduszkę</div>
+  </div>
+
+  <p>W 1987 roku inżynierowie z NASA Johnson Space Center w Teksasie mieli problem. Astronauci w skafandrach kosmicznych doświadczali ekstremalnych wahań temperatury — od minus 150°C w cieniu do plus 120°C na słońcu. Istniejące systemy chłodzenia (kanały z wodą przepływającą przez skafander) były ciężkie, awaryjne i niewystarczające.</p>
+
+  <p>Potrzebowali materiału, który sam, bez żadnej pomocy, reguluje temperaturę. Pochłania ciepło, gdy robi się za gorąco. Oddaje je, gdy robi się za zimno. Bez prądu, bez wody, bez elektroniki.</p>
+
+  <p>Tak powstała technologia PCM — <strong>Phase Change Material</strong> — materiał zmiennofazowy.</p>
+
+  <div class="mechanism-box">
+    <div class="box-label">Jak działa PCM</div>
+    <p>Tysiące mikroskopijnych kapsułek wbudowanych w tkaninę poszewki zawierają substancję, która zmienia fazę (ze stałej na ciekłą) w temperaturze 28–32°C — dokładnie w zakresie temperatury skóry.</p>
+    <p>Gdy Twoje ciało się nagrzewa — kapsułki <strong>pochłaniają</strong> nadmiar ciepła, zmieniając fazę. Gdy ciało się ochładza — kapsułki <strong>oddają</strong> ciepło, wracając do stanu stałego.</p>
+    <p>Cykl powtarza się automatycznie — przez całą noc — bez prądu, bez wody, bez żadnej ingerencji. To nie jest chłodzenie. To termoregulacja.</p>
+  </div>
+
+  <p>Przez 30 lat ta technologia była dostępna wyłącznie w skafandrach kosmicznych, odzieży wojskowej i specjalistycznej. Firma Outlast Technologies uzyskała wyłączne prawa patentowe i przeniosła ją do tekstyliów konsumenckich. Teraz ta sama zasada fizyki, która chroniła astronautów — chroni Ciebie.</p>
+
+  <p>Ale jest jedna rzecz, która sprawia, że PCM jest szczególnie istotne dla kobiet w menopauzie.</p>
+
+  <div class="stat-callout">
+    <span class="stat-number">3:00 w nocy</span>
+    <span class="stat-desc">To jest godzina, o której żelowa poduszka jest już ciepła.<br>I dokładnie ta godzina, o której poszewka PCM aktywuje się po raz pierwszy.</span>
+  </div>
+
+  <p>PCM nie chłodzi, gdy kładziesz się spać. Wtedy jeszcze nie potrzebujesz chłodzenia. PCM aktywuje się dokładnie wtedy, gdy Twoje ciało się przegrzewa — bo reaguje na wzrost temperatury w czasie rzeczywistym. To jest kluczowy moment, w którym żel zawodzi, a PCM zaczyna pracować.</p>
+
+  <p>Żel jest zimny o 22:00, gdy tego nie potrzebujesz. PCM jest gotowy o 3:00 w nocy, gdy tego potrzebujesz najbardziej.</p>
+
+  <div class="divider"></div>
+
+  <!-- REASON 4 — COMPARISON / WHY THIS IS DIFFERENT -->
+  <div class="section-label">
+    <div class="section-number">4</div>
+    <div class="section-title">Termostat, nie kostka lodu — dlaczego PCM to zupełnie inna kategoria</div>
+  </div>
+
+  <p>Łatwo pomyśleć: „kolejna chłodząca poszewka." Ale porównywanie PCM do żelowych poduszek czy bambusowych prześcieradeł jest jak porównywanie klimatyzacji do otwartego okna. Technicznie obydwa „chłodzą" — ale działają na zupełnie innej zasadzie.</p>
+
+  <div class="comparison">
+    <div class="comparison-header">
+      <div class="old">Standardowe „cooling"</div>
+      <div class="new">Technologia PCM</div>
+    </div>
+    <div class="comparison-row">
+      <div class="old-cell">Pochłania ciepło w jednym kierunku</div>
+      <div class="new-cell">Pochłania i oddaje ciepło cyklicznie</div>
+    </div>
+    <div class="comparison-row">
+      <div class="old-cell">Nasyca się po 10–15 min</div>
+      <div class="new-cell">Resetuje się automatycznie przez całą noc</div>
+    </div>
+    <div class="comparison-row">
+      <div class="old-cell">Chłodzi na starcie (22:00)</div>
+      <div class="new-cell">Aktywuje się przy wzroście temp. (3:00)</div>
+    </div>
+    <div class="comparison-row">
+      <div class="old-cell">Pasywna absorpcja</div>
+      <div class="new-cell">Aktywna termoregulacja</div>
+    </div>
+    <div class="comparison-row">
+      <div class="old-cell">Radzi sobie z potem PO fakcie</div>
+      <div class="new-cell">Zapobiega przegrzaniu ZANIM wystąpi pot</div>
+    </div>
+    <div class="comparison-row">
+      <div class="old-cell">Żel, bambus, moisture-wicking</div>
+      <div class="new-cell">Mikrokapsułki zmiennofazowe (NASA)</div>
+    </div>
+  </div>
+
+  <p>To nie jest upgrade. To jest zupełnie inny mechanizm działania. I&nbsp;to jest powód, dla którego kobiety, które próbowały „wszystkiego" — i nic nie działało — w końcu przesypiają noc.</p>
+
+  <div class="quote-block">
+    <p>„Byłam bardzo sceptyczna, bo nie mogłam zrozumieć, jak to miałoby działać. Ale… to działa!"</p>
+    <div class="quote-source">— Recenzja 5★, Fine Bedding Company Smart Temperature</div>
+  </div>
+
+  <p>Zauważ schemat w recenzjach produktów z PCM. Najsilniejsze zaczynają się od sceptycyzmu: „nie wierzyłam", „byłam pewna, że to kolejne marketingowe kłamstwo", „kupiłam tylko dlatego, że była gwarancja zwrotu." I kończą się tym samym zdaniem: „ale to działa."</p>
+
+  <p>To jest naturalna ścieżka klientki CoolSleep — od sceptyka do wyznawcy. Od kobiety, która przestała wierzyć w obietnice „cooling", do kobiety, która w końcu przespała noc.</p>
+
+  <!-- ============================================ -->
+  <!-- PART 2 BEGINS HERE -->
+  <!-- ============================================ -->
+
+  <div class="divider"></div>
+
+  <!-- REASON 5 — REAL STORIES / SOCIAL PROOF -->
+  <div class="section-label">
+    <div class="section-number">5</div>
+    <div class="section-title">„Nie wierzyłam. Kupiłam, bo była gwarancja zwrotu. Trzecią noc przespałam do rana."</div>
+  </div>
+
+  <p>Najlepszym dowodem na to, że coś działa, nie jest reklama. Są nim kobiety, które przeszły tę samą drogę co Ty — od lat szukały rozwiązania, wydawały pieniądze na produkty, które zawodziły, i w końcu zdecydowały się na PCM. Nie dlatego, że uwierzyły w obietnice. Dlatego, że nie miały nic do stracenia.</p>
+
+  <p>Oto, co mówią:</p>
+
+  <div class="testimonial-stack">
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">„Mam 52 lata i od dwóch lat budziłam się 3–4 razy w nocy zlana potem. Zmieniałam piżamę, obracałam poduszkę, leżałam i czekałam, aż znowu zasnę. Próbowałam żelowych poduszek — działały może 10 minut. Bambusowe prześcieradło? Oddycha, ale nie chłodzi. Kiedy zobaczyłam poszewkę CoolSleep, pomyślałam: kolejne marketingowe kłamstwo. Zamówiłam tylko dlatego, że była gwarancja 60 dni. Pierwsza noc — obudziłam się raz, ale nie w pocie. Druga — obudziłam się, ale zasnęłam od razu. Trzecia — przespałam do rana. Nie pamiętam, kiedy ostatnio mi się to zdarzyło."</p>
+      <div class="testimonial-author">— Dorota, 52 lata, Warszawa</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">„Mój mąż kupił mi to na urodziny, bo nie mógł patrzeć, jak co noc wstaję i zmieniam pościel. Byłam sceptyczna — jak poszewka może pomóc na coś, z czym nie radzą sobie suplementy? Ale to nie jest suplementy kontra poszewka. To jest zupełnie co innego. Poszewka nie leczy menopauzy. Ona sprawia, że nocne poty nie niszczą mi snu. Obie strony poduszki są chłodne. Przez całą noc. To brzmi absurdalnie, dopóki tego nie poczujesz."</p>
+      <div class="testimonial-author">— Agnieszka, 48 lat, Kraków</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">„Jestem tą kobietą, która »daje radę«. Pracuję, prowadzę dom, wożę dzieci. Nikt nie wie, że od roku nie przesypiam nocy. Nie narzekam — szukam rozwiązań. Znalazłam CoolSleep o 2 w nocy na telefonie. Zamówiłam 2 sztuki — jedną dla siebie, jedną dla męża, który też się przegrzewa. Po tygodniu zamówiłam komplet na całe łóżko. Nie przesadzam: to jedyny produkt »chłodzący«, który naprawdę działa dłużej niż kwadrans."</p>
+      <div class="testimonial-author">— Katarzyna, 46 lat, Poznań</div>
+    </div>
+
+  </div>
+
+  <p>Zauważ, co łączy te historie. Żadna z tych kobiet nie uwierzyła w CoolSleep od razu. Każda próbowała wcześniej czegoś innego. Każda była sceptyczna. I każda podjęła decyzję nie dlatego, że zobaczyła reklamę — ale dlatego, że gwarancja zwrotu oznaczała, że nie ryzykuje nic.</p>
+
+  <p>To jest dokładnie ta ścieżka, którą proponujemy Tobie.</p>
+
+  <div class="divider"></div>
+
+  <!-- REASON 6 — OBJECTION HANDLING -->
+  <div class="section-label">
+    <div class="section-number">6</div>
+    <div class="section-title">Odpowiedzi na pytania, które pewnie właśnie sobie zadajesz</div>
+  </div>
+
+  <p>Jeśli czytasz ten artykuł, to prawdopodobnie myślisz o jednym z poniższych. Odpowiadamy na każde — bezpośrednio, bez marketingowych uników.</p>
+
+  <div class="faq-item">
+    <div class="faq-question">„Brzmi jak marketing. PCM? Phase Change? Pewnie kolejny wymysł."</div>
+    <div class="faq-answer">PCM nie jest wynalazkiem firmy pościelowej. To technologia opracowana przez NASA Johnson Space Center w latach 80., opatentowana przez Outlast Technologies i stosowana od ponad 30 lat w skafandrach kosmicznych, odzieży wojskowej i medycznej. Zasada działania — zmiana fazy materiału w odpowiedzi na temperaturę — to fizyka, nie marketing. Działa na tej samej zasadzie, co lód topniejący w szklance: pochłania ciepło, zmieniając stan skupienia. Z tą różnicą, że mikrokapsułki PCM robią to w obie strony — i powtarzają cykl automatycznie.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">„Za droga. Moja poszewka z Pepco kosztuje 20 zł."</div>
+    <div class="faq-answer">Policz, ile dotychczas wydałaś na produkty, które nie działały. Żelowa poduszka — 80–150 zł. Bambusowe prześcieradło — 100–200 zł. Suplementy na sen — 50 zł miesięcznie. Razem: kilkaset złotych na rozwiązania, które zawiodły, bo działały na złej zasadzie. CoolSleep to jedyna poszewka, która używa technologii zmiennofazowej. Jeśli nie spełni oczekiwań w ciągu 60 nocy — oddajesz za darmo. To nie jest koszt. To jest ostatni zakup w tej kategorii, jaki kiedykolwiek zrobisz.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">„Czy to nie będzie szeleszczała / plastikowa / śliska?"</div>
+    <div class="faq-answer">Mikrokapsułki PCM są wbudowane w strukturę tkaniny — nie leżą na powierzchni. Poszewka CoolSleep wygląda i czuje się jak normalna, wysokiej jakości poszewka. Nie jest plastikowa, nie szeleszcze, nie ślizga się. Twój partner nie zauważy różnicy — oprócz tego, że wreszcie oboje się wyśpicie. A jeśli uczucie tkaniny Ci nie odpowiada — gwarancja 60 nocy oznacza, że zwracasz bez pytań.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">„Skąd wiem, że zadziała akurat na MOJE nocne poty?"</div>
+    <div class="faq-answer">Nie musisz wiedzieć z góry. Dlatego istnieje gwarancja 60 nocy próbnych. PCM aktywuje się w odpowiedzi na wzrost temperatury skóry — niezależnie od przyczyny tego wzrostu. Menopauza, perimenopauza, gorąca sypialnia, przegrzewanie się w nocy — mechanizm jest ten sam: Twoje ciało się nagrzewa, kapsułki pochłaniają nadmiar ciepła. To nie jest lek. To materiał, który reaguje na fizykę Twojego ciała.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">„Czy można ją prać? Czy PCM przetrwa wielokrotne pranie?"</div>
+    <div class="faq-answer">Tak. Mikrokapsułki PCM są trwale wbudowane w tkaninę i nie wypłukują się podczas prania. Poszewkę CoolSleep można prać w pralce w 30°C. Po setkach cykli prania kapsułki zachowują pełną skuteczność termoregulacji. To nie jest nadruk ani napylenie — to integralna część struktury materiału.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">„Mój partner nie będzie chciał spać na czymś dziwnym."</div>
+    <div class="faq-answer">CoolSleep wygląda jak premium poszewka, bo nią jest. Gładka, matowa, przyjemna w dotyku. Żadnych żeli, żadnych kabli, żadnej elektroniki. Twój partner nie zobaczy żadnej różnicy — poczuje tylko, że obie strony poduszki są chłodne. Wiele par zamawia komplet na całe łóżko po pierwszym tygodniu.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- REASON 7 — THE OFFER + GUARANTEE + CTA -->
+  <div class="section-label">
+    <div class="section-number">7</div>
+    <div class="section-title">60 nocy w chłodzie — albo oddaj za darmo</div>
+  </div>
+
+  <p>Wiemy, że po latach rozczarowań obietnice „cooling" brzmią pusto. Dlatego nie prosimy Cię o wiarę. Prosimy o 60 nocy.</p>
+
+  <p>Zamów poszewkę CoolSleep. Śpij na niej. Pierz ją. Testuj ją przez najgorsze noce, jakie masz. Jeśli po 60 nocach nie przesypiasz lepiej — oddajesz. Bez pytań, bez tłumaczeń, z pełnym zwrotem pieniędzy.</p>
+
+  <div class="guarantee-box">
+    <div class="guarantee-icon">🛡️</div>
+    <div class="guarantee-title">Gwarancja „60 Nocy w Chłodzie"</div>
+    <div class="guarantee-text">Śpij w chłodzie albo oddaj za darmo. Przez 60 nocy testujesz poszewkę CoolSleep w swoim łóżku, na swoich nocnych potach, w swojej sypialni. Jeśli nie spełni oczekiwań — pełny zwrot pieniędzy. Żadnych warunków, żadnych pytań. Wystarczy jeden e-mail.</div>
+  </div>
+
+  <p>Dlaczego możemy sobie na to pozwolić? Bo wiemy, co się dzieje po pierwszym tygodniu. Kobiety, które zamówiły jedną poszewkę „na próbę" — wracają po komplet na całe łóżko. Dane pokazują, że zadowolone klientki kupują 4–6 poszewek. Nie dlatego, że je namawiamy. Dlatego, że w końcu przesypiają noc.</p>
+
+  <!-- PRICING -->
+  <div class="pricing-section">
+    <div class="pricing-label">Wybierz swój zestaw</div>
+
+    <div class="pricing-card">
+      <div class="pricing-tier">Na start</div>
+      <div class="pricing-qty">1 poszewka</div>
+      <div class="pricing-desc">Przetestuj technologię PCM na własnej poduszce. Pełna gwarancja 60 nocy.</div>
+      <div class="pricing-cta-wrap">
+        <a href="#" class="cta-button">Zamów 1 poszewkę →</a>
+      </div>
+    </div>
+
+    <div class="pricing-card pricing-popular">
+      <div class="popular-badge">Najpopularniejszy</div>
+      <div class="pricing-tier">Zestaw na łóżko</div>
+      <div class="pricing-qty">2 poszewki <span class="pricing-save">-15%</span></div>
+      <div class="pricing-desc">Jedna dla Ciebie, jedna dla partnera. Obie strony łóżka w chłodzie — przez całą noc.</div>
+      <div class="pricing-cta-wrap">
+        <a href="#" class="cta-button cta-primary">Zamów 2 poszewki -15% →</a>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-tier">Komplet premium</div>
+      <div class="pricing-qty">4 poszewki <span class="pricing-save">-25%</span></div>
+      <div class="pricing-desc">Pełen komplet na łóżko + zapas na zmianę. Największa oszczędność.</div>
+      <div class="pricing-cta-wrap">
+        <a href="#" class="cta-button">Zamów 4 poszewki -25% →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL EMOTIONAL CLOSE -->
+  <div class="divider"></div>
+
+  <p>Pomyśl o jutrzejszym poranku.</p>
+
+  <p>O tym, jak wstajesz po nocy, w której nie musiałaś zmieniać piżamy. Nie musiałaś obracać poduszki. Nie leżałaś w ciemności, czekając na kolejny atak gorąca. Po prostu spałaś — i obudziłaś się wypoczęta.</p>
+
+  <p>Twoje ciało nie potrzebuje kolejnego suplementu. Twoja sypialnia nie potrzebuje klimatyzacji za tysiące złotych. Twoja poduszka potrzebuje jednej rzeczy: materiału, który reaguje na Twoje ciepło i reguluje temperaturę tak, jak termostat — nie jak kostka lodu.</p>
+
+  <p>To jest dokładnie to, co robi CoolSleep.</p>
+
+  <div class="final-cta-section">
+    <div class="final-cta-headline">Przespij pierwszą pełną noc w chłodzie</div>
+    <div class="final-cta-sub">Gwarancja 60 nocy. Darmowa dostawa. Pełny zwrot, jeśli nie zadziała.</div>
+    <a href="#" class="cta-button cta-primary cta-large">Sprawdź dostępność CoolSleep →</a>
+    <div class="final-cta-note">Czas realizacji: 24–48h · Bezpieczna płatność · Zwrot bez pytań</div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <p>To jest materiał reklamowy (advertorial) przygotowany przez CoolSleep. Przedstawione historie klientek są oparte na doświadczeniach typowych dla użytkowniczek produktów z technologią PCM. Wyniki mogą się różnić w zależności od indywidualnych uwarunkowań. Poszewka CoolSleep nie jest wyrobem medycznym i nie jest przeznaczona do leczenia, diagnozowania ani zapobiegania jakimkolwiek schorzeniom. Obowiązuje gwarancja satysfakcji — szczegóły na stronie produktu.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
